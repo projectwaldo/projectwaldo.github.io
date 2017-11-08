@@ -5,7 +5,10 @@
 
     display: block;
     box-sizing: border-box;
-
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+        margin-bottom:auto;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -50,7 +53,7 @@
 
 .slick-track
 {
-    position: relative;
+    position: absolute;
 
 
     display: block;
@@ -74,6 +77,7 @@
 .slick-slide
 {
     display: none;
+    margin:1px;
     float: left;
 }
 [dir='rtl'] .slick-slide
@@ -84,10 +88,12 @@
 {
     display:block;
     height:100%;
-    width: 370px;
-    min-width:100%;
+    width:365px;
+    min-width: 100%;
     margin-left:auto;
     margin-right:auto;
+    margin-top:auto;
+        margin-bottom:auto;
 }
 .slick-slide.slick-loading img
 {
