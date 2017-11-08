@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Dragend JS mobile demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <style type="text/css">
+    * {
+
+    }
+    body {
+      background: #eee;
+
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #demo {
+
+      margin:auto;
+      max-height: 100%;
+      height: auto;
+      width: auto\9; /* ie8 */
+      
+      visibility: hidden;
+      background: #457;
+      cursor: hand;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+    
+    #demo li.first {
+      background: #577;
+    }
+    #demo li.middle {
+      background: #1e8;
+    }
+    #demo li.last {
+      background: #e8b;
+    }
+   
+  </style>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+  <div id="demo">
+    <ul>
+      <li class="dragend-page">
+        <div class="item">
+          <img src="projectwaldo-short-video.gif" alt="" draggable="false">
+        </div>
+      </li>
+      <li class="dragend-page">
+        <div class="item">
+          <img src="projectwaldo-symphony-video.gif" alt="" draggable="false">
+        </div>
+      </li>
+      <li class="dragend-page">
+        <div class="item">
+          <img src="projectwaldo-outlook-img.png" alt="" draggable="false">
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="dragend.js"></script>
+
+  <script>
+    $(function() {
+      new Dragend($("#demo").get(0), {
+        afterInitialize: function() {
+          $("#demo").css("visibility", "visible");
+        }
+      });
+    });
+    
+  </script>
+
+</body>
+</html>
